@@ -2,6 +2,7 @@
 /node_modules
 
 # IDE - VSCode
+.vscode
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
@@ -11,3 +12,5 @@
 
 npm-debug.log
 yarn-error.log
+
+package-lock.json
