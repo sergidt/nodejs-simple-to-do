@@ -5,20 +5,18 @@ const Command = {
     Remove: 'remove'
 };
 
+const  description = {
+    demand: true,
+    alias: 'd',
+    desc: 'The Todo description'
+};
+
 const argv = require('yargs')
     .command(Command.Create, 'Creates a new todo providing its description', {
-        description: {
-            demand: true,
-            alias: 'd',
-            desc: 'The Todo description'
-        }
+        description
     })
     .command(Command.Update, 'Updates the todo\'s state providing its description', {
-        description: {
-            demand: true,
-            alias: 'd',
-            desc: 'The Todo description'
-        },
+        description,
         completed: {
             alias: 'c',
             desc: 'The Todo status',
@@ -26,11 +24,7 @@ const argv = require('yargs')
         }
     })
     .command(Command.Remove, 'Removes a todo providing its description', {
-        description: {
-            demand: true,
-            alias: 'd',
-            desc: 'The Todo description'
-        }
+        description
     })
     .command(Command.List, 'Lists all todo\'s')
     .alias('h', 'help')
